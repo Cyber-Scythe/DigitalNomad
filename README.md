@@ -1,84 +1,175 @@
-# Unit 5 Project Intro
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
 
-Welcome to the Unit 5 Project. This project is a starting point that you'll be making extensive changes to as you design and build your own application. The code provided here is a starting point meant to remind you of patterns that we've been using, as well as show you a few new patterns that you might find useful. This document has 2 main sections:
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+    <img src="resources/images/DigitalNomadLogo.PNG" alt="Logo" width="160" height="160">
 
-- Deliverables
-- Infrastructure
+<h3 align="center">Digital Nomad</h3>
 
-> **NOTE:** There's a lot to this project, so we've split out the more tactical "how to" guidance into a [separate README](./README-SETUP.md) that you'll want to review and follow the included instructions for after you read through this one.
+  <p align="center">
+    Find Your Destination
+    <br />
+  </p>
+</div>
+___
 
-## Deliverables
 
-These are the required deliverables/reviews that you and your team will need to create during the project. _The status of each of these will be tracked in the GitHub project that your team is using._
+<h3>About The Project</h3>
 
-### Team Deliverables
+<p>
+Digital Nomad is a "mid-stone" group project at Nashville Software School. Contributors to this project include Alex Murillo, Erika Smith, Matt Marotta, and Steve Winters.
+Digital Nomad is a service that allows users to search for travel destinations based on criteria such as access to beaches, night life, etc. Users are then provided a list of potential destinations, which they can then save for later viewing at a provided URL.
+<br><br>
+<img src ="resources/images/DigitalNomadFrontPage.PNG" alt="FrontPage">
 
-* **Design Document: Problem Statement** Your team’s technical design specification. Complete [this template](resources/design-document.md). This should explain the product you'll be creating and what problem it solves.
-* **Design Document: Peer Team Review** Another team will review your technical design to help improve it. Each team will review at least one other teams design.
-* **Design Document: Instructor Review** One of the instructors will review your technical design after you've create it and reviewed it with another team.
-* **Team Charter:** Statements of how your team will work to ensure constructive collaboration, fairness, that everyone is learning and contributing. Complete [this template](resources/team-charter.md).
-* **Working Product:** Your project, as a working website deployed to AWS.
-* **Team Reflection:** A final retrospective with a few questions to answer as a team to reflect on what you have accomplished and learned throughout the project. Complete [this template](resources/team-reflection.md).
+</p>
+<p align="center">
+<a href="https://github.com/Cyber-Scythe/DigitalNomad">View Demo</a> 
+· 
+<a href="https://github.com/Cyber-Scythe/DigitalNomad/issues">Report Bug</a> 
+·
+<a href="https://github.com/Cyber-Scythe/DigitalNomad/issues">Request Feature</a>
+</p>
 
-### Individual Deliverables
 
-* **Accomplishment Tracking:** You'll be keeping a log of your individual accomplishments and lessons learned throughout this project week-by-week. Keeping a high level record of your accomplishments throughout your career is useful for your career growth and promotion. Use [this template](resources/individual-accomplishments-template.md) as a starting point, but you can keep this log in whatever tool/location you'd like.
+<!-- BUILT WITH -->
+### Built With
 
-## Technical Learning Objectives
+* <img alt="LinkedIn" src="https://img.shields.io/badge/-Java-red"></a>
+* <img alt="LinkedIn" src="https://img.shields.io/badge/-Javascript-orange"></a>
+* <img alt="LinkedIn" src="https://img.shields.io/badge/-HTML-blue"></a>
+* <img alt="LinkedIn" src="https://img.shields.io/badge/-CSS-green"></a>
+* <img alt="LinkedIn" src="https://img.shields.io/badge/-Docker-9cf"></a>
+* <img alt="LinkedIn" src="https://img.shields.io/badge/-AWS%20DynamoDB-ff69b4"></a>
+* <img alt="LinkedIn" src="https://img.shields.io/badge/-AWS%20CloudFront-yellowgreen"></a>
+* <img alt="LinkedIn" src="https://img.shields.io/badge/-AWS%20CloudFormation-purple"></a>
 
-This project is very open-ended and you/your team will be doing a lot of creative thinking to decide what you want to build. That said, there are several technical learning objectives that each team must meet. You should review the [Technical Learning Objectives](./resources/technical-objectives.md) as you familiarize yourself with the project. As part of the team reflection/retrospective you'll fill out this document with your team to document how you met the different objectives.
+<p>(<a href="#readme-top">back to top</a>)</p>
 
-## Project Starter Infrastructure
 
-Your team has been provided with a website, hosted by [CloudFront](https://aws.amazon.com/cloudfront/), that talks to an Amazon API Gateway endpoint. (A web front-end is likely new for several of you, as your unit projects so far have been all service development.) The Amazon API Gateway connects to a Lambda service, which stores its data in DynamoDB, an architecture that we’ve used several times on unit projects so far. The starter code provided contains a website that uses the playlist service you created in Unit 3. Below, Image 1 describes the architecture of the starter project.
 
-![Image 1: The architecture of your starter project](resources/images/architecture_diagram.png)
+<!-- GETTING STARTED -->
+## Getting Started
 
-*Image 1: Architecture diagram for the starter project*
+The following instructions are for setting up this project locally.
 
-### Introduction to the Starter Code
 
-Unlike our unit projects in the past, this project will have two code bases.
+## Setup
 
-[One code base](./MusicPlaylistServiceLambda) will be for your Lambda service code, similar to what we’ve seen previously. This will contain code that designs and runs your service APIs, as well as packages to interact with and test your service.
+1. Use an Amazon AWS account.
+2. Install AWS CLI. [Documentation](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+3. Install AWS SAM CLI. [Documentation](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/install-sam-cli.html)
+4. Install NodeJS to run the npm commands below.
 
-The [second code base](./web) will contain code for your website:
+- For Windows / WSL users:
+```shell
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - &&\
+sudo apt-get install -y nodejs
+```
+- For Mac users:
+```shell
+brew install node
+```
 
-* HTML: The content of your web pages
-* CSS: The styling and formatting of your web pages
-* JavaScript: The code that runs when a user interacts with the web pages, some of which triggers the browser to send requests to the service
+5. Install Docker <br><br>
+  [Linux](https://docs.docker.com/desktop/install/) <br>
+  [Mac](https://docs.docker.com/desktop/install/mac-install/) <br>
+  [Windows](https://docs.docker.com/desktop/install/windows-install/) <br>
 
-Often times these are separated into different repositories, but for simplicity’s sake we've kept them in the same repository for this project.
+### Backend Setup via Lambda Service
+1. Build the Java code: `sam build`
+2. Create an S3 bucket: `aws s3 mb s3://YOUR_BUCKET`
+3. Deploy the SAM template: `sam deploy --s3-bucket BUCKET_FROM_ABOVE --parameter-overrides S3Bucket=BUCKET_FROM_ABOVE FrontendDeployment=local`
+   > **NOTE:** _Yes you have to provide the same S3 bucket name twice. Yes this is annoying._
+4. Run the local API: `sam local start-api --warm-containers LAZY`
 
-_Both of these should be considered starting points/example code. You will end up removing/replacing all of it as you build your own project._
 
-### Deploying
+### Frontend Setup
+1. CD into the web directory: `cd web`
+2. Install dependencies : `npm install`
+3. Run the local server: `npm run run-local`
 
-We'll be using GitHub Actions to deploy the code to AWS. One of the first tasks that you'll do as a team is to configure the repository for this. Once that's completed your code should build and deploy as described in the [next README](./README-SETUP.md).
 
-### AWS Resources
+After the steps above, you will have a server running on port `8000` - you can access it via [http://localhost:8000](http://localhost:8000) in your web browser.
 
-Each team has one AWS account they will share to deploy their website and service. This is where all of your changes will be merged together and visible. Your team's account will be named something like `SE_Unit_5_Group_TEAMNAME` and will be available for you to configure like you've done in previous units.
 
-### Your website!
+### Installation
 
-To access your website, you'll need to build it first. The [next README](./README-SETUP.md) has instructions on the different ways we'll be doing this.
+1. Clone the repo
+   ```bash
+   git clone https://github.com/Cyber-Scythe/DigitalNomad.git
+   ```
+3. Install NPM packages
+   ```bash
+   npm install
+   ```
 
-## How Your Website Works
+<p align="left">(<a href="#readme-top">back to top</a>)</p>
 
-Creating each page of your website requires a surprising amount of interactions between different JavaScript files and between our frontend and our backend. Our view playlist page makes 3 separate calls to our MusicPlaylistService.
+---
 
-Let’s look at one piece - adding the header to our page. This requires the full end to end flow of HTML to JS to backend service all the way back to updating our HTML.
+### View This Project
 
-![Image 2: The end to end flow of HTML to JS to the backend service, and the return to HTML.](resources/images/sequence_diagram.png)
+<p>View this project: <a href="https://youtu.be/dHkNxV84Lhk"><b>here<b></a>.</p>
 
-*Image 2: The end to end flow of HTML to JS to the backend service, and the return to HTML*
+---
 
-Two important things to call out:
+<!-- CONTRIBUTING -->
+## Contributing
 
-1. To call our backend we are always going through our `MusicPlaylistClient`.
-2. The `DataStore` uses a different pattern than we’ve seen previously. It has two member variables - the state, which is a JavaScript object that should hold all of the data being used across a webpage, and a list of listeners. The listeners are methods in other objects. Anytime `set` or `setState` is called it loops through all of those methods and executes each one. So in each of those listeners the first thing we do is check to see if the data that they rely on is null. Then, if it’s not null, we update the html to reflect the new data. You can take a look at the `addPlaylistToPage()` method in `viewPlaylist.js` for an example of this.
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-## Project Setup
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
 
-This document has provided an overview of the project as a whole. For more specifics on how to configure the project and your GitHub repo/AWS account, continue by reading [README-SETUP.md](./README-SETUP.md).
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+<p align="left">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTACT -->
+## Contact
+
+Erika Smith:  erikadaniellesmith@gmail.com
+<br>
+<a href="https://www.linkedin.com/in/erika-smith-dev/">
+<img alt="LinkedIn" src="https://img.shields.io/badge/-LinkedIn-brightgreen"></a>
+<br>
+<a href="https://github.com/Cyber-Scythe/">
+<img alt="GitHub" src="https://img.shields.io/badge/-GitHub-blueviolet"></a>
+
+
+<p align="left">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- ACKNOWLEDGMENTS -->
+## Acknowledgments
+  The following people contributed to the development of this project
+* Alex Murillo
+  <a href="https://github.com/emergency22">
+  <img alt="GitHub" src="https://img.shields.io/badge/-GitHub-brightgreen"></a>
+  <br>
+* Matt Marotta 
+  <a href="https://github.com/MattMarotta94">
+  <img alt="GitHub" src="https://img.shields.io/badge/-GitHub-brightgreen"></a>
+  <br>
+* Steve Winters
+  <a href="https://github.com/winters5885">
+  <img alt="GitHub" src="https://img.shields.io/badge/-GitHub-brightgreen"></a>
+
+<p align="left">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
